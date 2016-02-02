@@ -1,10 +1,19 @@
 <h1>All Products</h1>
   <!-- <%= link_to "Login", new_session_path %>
   <%= link_to "Signup", new_user_path %> -->
-  <%= link_to "Create new product", new_product_path %>
+    <div class = "link">
+    <%= link_to "Create new product", new_product_path %><br>
+    </div>
+
   <% @products.each do |product| %>
-    <%= product.name %>
-    <%= product.description %>
-    <%= product.formatted_price %>
+    <div class="product_item">
+      <%= product.name %>
+    </div>
+    <div class="product_item">
+      <%= product.description %>
+    </div>
+    <div class="product_item">
+      <%= product.formatted_price %>
+    </div>
       <%= link_to "Show Product", product_path(product) %>
   <% end %>

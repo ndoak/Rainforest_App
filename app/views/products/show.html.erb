@@ -1,18 +1,4 @@
 <h1>Product</h1>
-<div class="product_item">
-  <%= @product.name  %><br>
-</div>
-<div class="product_item">
-  <%= @product.description  %><br>
-</div>
-<div class="product_item">
-  <%= @product.formatted_price  %><br>
-</div>
-
-<div class = "links">
-  <%= link_to 'Delete Product', product_url, :method => :delete %>
-  <%= link_to 'Edit Product', edit_product_url(@product) %>
-</div>
-
+<%= render @product%>
 <%= render 'createnewreview' %>
 <%= render 'reviews' %>

@@ -2,8 +2,8 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on('ready page:load', function() {
-  $('#search-form').submit(function(event) {
-    event.preventDefault();
+  $('#search-form').submit(function(e) {
+    e.preventDefault();
     var searchValue = $('#search').val();
     $.getScript('/products?search=' + searchValue);
     // $.get('/products?search=' + searchValue)

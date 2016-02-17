@@ -1,4 +1,8 @@
 <h1>All Products</h1>
+
+<%= link_to 'New Product', new_product_path %>
+
+<h1><small><%= page_entries_info @products %></small></h1>
 <%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "Search" %>
@@ -7,6 +11,8 @@
 <div id="products">
   <%= render @products %>
 </div>
+
+<%= paginate @products %>
 
   <!-- <%= link_to "Login", new_session_path %>
   <%= link_to "Signup", new_user_path %> -->

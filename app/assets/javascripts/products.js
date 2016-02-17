@@ -7,7 +7,7 @@ $(document).on('ready page:load', function() {
     var searchValue = $('#search').val();
     $.getScript('/products?search=' + searchValue);
   });
-  $(window).scroll(function) {
+  $(window).scroll(function() {
     var url = $('.pagination span.next').children().attr('href');
     if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 50) {
       $('.pagination span.next').text("Fetching more products...");

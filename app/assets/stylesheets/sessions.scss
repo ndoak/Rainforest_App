@@ -1,3 +1,25 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  box-sizing:border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.background-image {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+body {
+
+  margin:0;
+}
+.wrapper {
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index:-1;
+    position: relative;
+
+}

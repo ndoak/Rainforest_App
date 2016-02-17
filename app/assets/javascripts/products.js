@@ -6,6 +6,15 @@ $(document).on('ready page:load', function() {
     e.preventDefault();
     var searchValue = $('#search').val();
     $.getScript('/products?search=' + searchValue);
+  });
+  $(window).scroll(function) {
+    var url = $('.pagination span.next').children().attr('href');
+    if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 50) {
+      $('.pagination span.next').text("Fetching more products...");
+      return $.getScript(url);
+    }
+  });
+});
     // $.get('/products?search=' + searchValue)
     //  .done(function(data){
     //    console.log(data);
@@ -18,5 +27,3 @@ $(document).on('ready page:load', function() {
     // }).done(function(data){
     //   $('#products').html(data);
     // });
-  });
-});
